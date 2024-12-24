@@ -1,12 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Updated import
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Feedback from './pages/Feedback';
-import Blog from './pages/Blog';
+import Feedback from './pages/Feedback'; // Correct import for Feedback page
 import Contact from './pages/Contact';
 import Content from './components/Content';
-import BlogDetail from './pages/BlogDetail'; // Add BlogDetail page
 
 const App = () => {
   return (
@@ -17,8 +15,6 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Content />} />
             <Route path="/feedback" element={<Feedback />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<BlogDetail />} /> {/* New route for individual blog */}
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </div>
